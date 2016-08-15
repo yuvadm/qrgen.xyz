@@ -27,6 +27,11 @@ class Qrgen extends React.Component {
     this.qr.size = this.state.size
   }
 
+  saveImage () {
+    this.refs.dl.download = 'qrgen-test.png'
+    this.refs.dl.href = this.qr.toDataURL()
+  }
+
   render () {
     return <div id='root'>
       <h1>QR Code Generator</h1>
@@ -36,6 +41,7 @@ class Qrgen extends React.Component {
       <input type='text' value={this.state.size} onChange={(e) => {
         this.setState(Object.assign({}, this.state, { size: e.target.value }))
       }}></input>
+      <a href='' download='qrgen.png' ref='dl' onClick={(e) => { this.saveImage() }}>Save QR Code</a>
       <canvas ref='qr' id='qr'></canvas>
       <footer>
           <p>Created by <a href="https://yuv.al">Yuval Adam</a>. Source available on <a href="https://github.com/yuvadm/qrgen.xyz">Github</a>.</p>
