@@ -10,7 +10,7 @@ class Qrgen extends React.Component {
     super(props)
     this.state = {
       text: 'Hello World!',
-      size: 100
+      size: 300
     }
   }
 
@@ -29,14 +29,14 @@ class Qrgen extends React.Component {
 
   render () {
     return <div id='root'>
-      <h1>qrgen</h1>
-      <canvas ref='qr' id='qr'></canvas>
+      <h1>QR Code Generator</h1>
       <input type='text' value={this.state.text} onChange={(e) => {
         this.setState(Object.assign({}, this.state, { text: e.target.value }))
       }}></input>
       <input type='text' value={this.state.size} onChange={(e) => {
         this.setState(Object.assign({}, this.state, { size: e.target.value }))
       }}></input>
+      <canvas ref='qr' id='qr'></canvas>
       <footer>
           <p>Created by <a href="https://yuv.al">Yuval Adam</a>. Source available on <a href="https://github.com/yuvadm/qrgen.xyz">Github</a>.</p>
       </footer>

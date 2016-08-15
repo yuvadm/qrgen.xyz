@@ -1,13 +1,33 @@
+@import 'bourbon';
+
 * {
     padding: 0;
     margin: 0;
 }
 
-div#root {
-    canvas#qr {
-        display: block;
+body {
+    font-family: $lucida-grande;
+    color: #ddd;
+    background: rgb(120, 23, 89);
+    a {
+        color: #aaa;
     }
-    input {
-        display: block;
+    div#root {
+        text-align: center;
+        h1 {
+            margin: 20px;
+        }
+        canvas#qr {
+            display: block;
+            margin: 10px auto;
+            padding: 20px;
+            border: 5px solid #ddd;
+            border-radius: 3px;
+            background-color: white;
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+        }
     }
 }
