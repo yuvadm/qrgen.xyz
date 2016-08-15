@@ -17,7 +17,13 @@ body {
         h1 {
             margin: 20px;
         }
+        p.save {
+            font-size: 0.7em;
+        }
         canvas#qr {
+            display: none;
+        }
+        img#qrimg {
             display: block;
             margin: 10px auto;
             padding: 20px;
