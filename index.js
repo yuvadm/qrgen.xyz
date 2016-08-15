@@ -37,6 +37,9 @@ class Qrgen extends React.Component {
       <input type='text' value={this.state.size} onChange={(e) => {
         this.setState(Object.assign({}, this.state, { size: e.target.value }))
       }}></input>
+      <footer>
+          <p>Created by <a href="https://yuv.al">Yuval Adam</a>. Source available on <a href="https://github.com/yuvadm/qrgen.xyz">Github</a>.</p>
+      </footer>
     </div>
   }
 }
