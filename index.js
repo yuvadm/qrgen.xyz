@@ -32,7 +32,6 @@ class Qrgen extends React.Component {
 
   render () {
     return <div id='root'>
-      <h1>QR Code Generator</h1>
       <input type='text' value={this.state.text} onChange={(e) => {
         this.setState(Object.assign({}, this.state, { text: e.target.value }))
       }}></input>

@@ -12,11 +12,12 @@ body {
     a {
         color: #aaa;
     }
+    h1 {
+        margin: 20px;
+        text-align: center;
+    }
     div#root {
         text-align: center;
-        h1 {
-            margin: 20px;
-        }
         p.save {
             font-size: 0.7em;
         }
