@@ -4,6 +4,23 @@ import QRious from 'qrious'
 
 import './base.scss'
 
+class SizeRadios extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      selected: props.vals[0]
+    }
+  }
+
+  render () {
+    return <div className='radios'>
+    {this.props.vals.map((v) => {
+      return <input type='radio' name={this.props.name} value={v}></input>
+    })}
+    </div>
+  }
+}
+
 class Qrgen extends React.Component {
 
   constructor (props) {
@@ -37,6 +54,7 @@ class Qrgen extends React.Component {
       <input type='text' value={this.state.size} onChange={(e) => {
         this.setState(Object.assign({}, this.state, { size: e.target.value }))
       }}></input>
+      <SizeRadios name='size' vals={[1,2,3,4]} />
       <p className='save'>To save the QR code, right-click the image and 'Save Image As', or touch and hold the image on your mobile browser.</p>
       <canvas ref='qr' id='qr'></canvas>
       <img ref='qrimg' id='qrimg'></img>
