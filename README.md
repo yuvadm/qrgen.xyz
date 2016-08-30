@@ -12,3 +12,7 @@ $ npm run dev
 $ git checkout gh-pages
 $ webpack --optimize-minimize
 ```
+
+## License
+
+[AGPLv3](LICENSE)
