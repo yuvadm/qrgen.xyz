@@ -23,7 +23,6 @@ class Qrgen extends React.Component {
     this.refs.qrimg.src = this.qr.toDataURL()
   }
 
-
   componentDidUpdate (prevProps, prevState) {
     this.qr.value = this.state.text
     this.qr.size = this.state.size
@@ -31,7 +30,7 @@ class Qrgen extends React.Component {
   }
 
   render () {
-    return <div id='root'>
+    return <div id='qrgen'>
       <h1>QR Code Generator</h1>
       <input type='text' value={this.state.text} onChange={(e) => {
         this.setState(Object.assign({}, this.state, { text: e.target.value }))
